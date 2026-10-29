@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="14dp" android:background="#F3F6FA">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Your personal dining assistant" android:textSize="21sp" android:textStyle="bold"
+        android:textColor="#17324D" android:padding="8dp" />
+    <TextView android:id="@+id/tvAiIntro" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Ask for food ideas, set a budget, or tell me what you want to order. Recommendations use your menu, daily specials, order history and local time."
+        android:textColor="#52677B" android:padding="8dp" android:layout_marginBottom="8dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <EditText android:id="@+id/etApiKey" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:hint="Gemini API key (saved on this device)" android:inputType="textPassword" android:singleLine="true" />
+        <Button android:id="@+id/btnSaveApiKey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save" android:textAllCaps="false" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvApiHelp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Get a Gemini API key from Google AI Studio. Your key stays on this device." android:textSize="12sp" android:textColor="#738396" android:padding="4dp" />
+    <ScrollView android:id="@+id/scrollChat" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true" android:layout_marginTop="8dp" android:layout_marginBottom="8dp">
+        <LinearLayout android:id="@+id/chatMessages" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+    </ScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <EditText android:id="@+id/etMessage" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:hint="e.g. Suggest dinner under ₹300" android:inputType="textCapSentences|textMultiLine" android:maxLines="4" />
+        <Button android:id="@+id/btnSend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Send" android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>
